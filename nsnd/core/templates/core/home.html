@@ -7,13 +7,15 @@
 {% block body_class %}view-home{% endblock %}
 
 {% block content %}
-<section class="hero is-large is-white view-home-hero">
-    <div class="hero-body">
+<section class="view-home-hero">
+    <div class="view-home-hero-body">
         <div class="container has-text-centered">
-            <div class="view-home-brand-wrapper">
-                <img class="view-home-brand" src="{% webpack_static "img/brand/logo-colorful.svg" %}" alt="NechciStadionNaDluh.cz" />
+            <div class="view-home-hero-body">
+                <div class="view-home-brand-wrapper">
+                    <img class="view-home-brand" src="{% webpack_static "img/brand/logo-colorful.svg" %}" alt="NechciStadionNaDluh.cz" />
+                </div>
+                <h1 class="subtitle has-margin-t-4">Referendum o stavbě <span class="view-home-brand-emphasize">fotbalového stadionu v centru Pardubic</span></h1>
             </div>
-            <h1 class="subtitle has-margin-t-4">Referendum o stavbě <span class="view-home-brand-emphasize">fotbalového stadionu v centru Pardubic</span></h1>
         </div>
     </div>
 </section>
