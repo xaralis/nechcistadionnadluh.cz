@@ -1,0 +1,184 @@
+{% extends "base.html" %}
+{% load webpack_static from webpack_loader %}
+
+{% block navbar %}{% endblock %}
+
+{% block page_title_full %}NechciStadionNaDluh.cz{% endblock %}
+{% block body_class %}view-home{% endblock %}
+
+{% block content %}
+<section class="hero is-large is-white view-home-hero">
+    <div class="hero-body">
+        <div class="container has-text-centered">
+            <div class="view-home-brand-wrapper">
+                <img class="view-home-brand" src="{% webpack_static "img/brand/logo-colorful.svg" %}" alt="NechciStadionNaDluh.cz" />
+            </div>
+            <h1 class="subtitle has-margin-t-4">Referendum o stavbě <span class="view-home-brand-emphasize">fotbalového stadionu v centru Pardubic</span></h1>
+        </div>
+    </div>
+</section>
+<main class="section view-home-section">
+    <div class="container">
+        <div class="tile is-ancestor">
+            <div class="tile is-parent">
+                <div class="tile is-child">
+                    <h2 class="title is-in-green">Proč referendum?</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praesent in mauris eu tortor porttitor accumsan. Nullam sit amet magna in magna gravida vehicula. Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? Donec ipsum massa, ullamcorper in, auctor et, scelerisque sed, est. Pellentesque arcu. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed convallis magna eu sem. Maecenas aliquet accumsan leo. Praesent vitae arcu tempor neque lacinia pretium. Pellentesque ipsum. Nulla est. Aliquam ornare wisi eu metus. Fusce nibh. Mauris elementum mauris vitae tortor. Duis ante orci, molestie vitae vehicula venenatis, tincidunt ac pede. Integer in sapien. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Sed elit dui, pellentesque a, faucibus vel, interdum nec, diam.</p>
+                </div>
+            </div>
+            <div class="tile is-parent">
+                <div class="tile is-child">
+                    <h2 class="title is-in-green">Co je na projektu špatně?</h2>
+                    <p>Nulla non lectus sed nisl molestie malesuada. Phasellus et lorem id felis nonummy placerat. Vestibulum fermentum tortor id mi. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat. Aenean id metus id velit ullamcorper pulvinar. Integer lacinia. Maecenas aliquet accumsan leo. Nulla non lectus sed nisl molestie malesuada. Vivamus ac leo pretium faucibus. Donec iaculis gravida nulla. Maecenas libero. Suspendisse sagittis ultrices augue. Maecenas fermentum, sem in pharetra pellentesque, velit turpis volutpat ante, in pharetra metus odio a lectus. Curabitur sagittis hendrerit ante. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Aliquam ornare wisi eu metus. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+<section class="section view-home-section">
+    <div class="container">
+        <h2 class="title view-home-section-headline"><span class="is-in-green">Přípravný výbor</span></h2>
+        <div class="columns is-mobile is-multiline">
+            <div class="column is-one-fifth-desktop is-half-mobile">
+                <div class="view-home-committee-member">
+                    <figure class="image is-48x48">
+                        <img src="https://bulma.io/images/placeholders/48x48.png" class="is-rounded">
+                    </figure>
+                    <div class="view-home-committee-member-name">
+                        <h3>Antonín Mlejnek</h3>
+                        <p>U Stadionu 430, Pardubice</p>
+                    </div>
+                </div>
+            </div>
+            <div class="column is-one-fifth-desktop is-half-mobile">
+                <div class="view-home-committee-member">
+                    <figure class="image is-48x48">
+                        <img src="https://bulma.io/images/placeholders/48x48.png" class="is-rounded">
+                    </figure>
+                    <div class="view-home-committee-member-name">
+                        <h3>Jan Smeták</h3>
+                        <p>U Stadionu 430, Pardubice</p>
+                    </div>
+                </div>
+            </div>
+            <div class="column is-one-fifth-desktop is-half-mobile">
+                <div class="view-home-committee-member">
+                    <figure class="image is-48x48">
+                        <img src="https://bulma.io/images/placeholders/48x48.png" class="is-rounded">
+                    </figure>
+                    <div class="view-home-committee-member-name">
+                        <h3>Karel Haas</h3>
+                        <p>U Stadionu 430, Pardubice</p>
+                    </div>
+                </div>
+            </div>
+            <div class="column is-one-fifth-desktop is-half-mobile">
+                <div class="view-home-committee-member">
+                    <figure class="image is-48x48">
+                        <img src="https://bulma.io/images/placeholders/48x48.png" class="is-rounded">
+                    </figure>
+                    <div class="view-home-committee-member-name">
+                        <h3>Dominik Bečka</h3>
+                        <p>U Stadionu 430, Pardubice</p>
+                    </div>
+                </div>
+            </div>
+            <div class="column is-one-fifth-desktop is-half-mobile">
+                <div class="view-home-committee-member">
+                    <figure class="image is-48x48">
+                        <img src="https://bulma.io/images/placeholders/48x48.png" class="is-rounded">
+                    </figure>
+                    <div class="view-home-committee-member-name">
+                        <h3>Vojtěch Dobeš</h3>
+                        <p>U Stadionu 430, Pardubice</p>
+                    </div>
+                </div>
+            </div>
+            <div class="column is-one-fifth-desktop is-half-mobile">
+                <div class="view-home-committee-member">
+                    <figure class="image is-48x48">
+                        <img src="https://bulma.io/images/placeholders/48x48.png" class="is-rounded">
+                    </figure>
+                    <div class="view-home-committee-member-name">
+                        <h3>Daniel Frýda</h3>
+                        <p>U Stadionu 430, Pardubice</p>
+                    </div>
+                </div>
+            </div>
+            <div class="column is-one-fifth-desktop is-half-mobile">
+                <div class="view-home-committee-member">
+                    <figure class="image is-48x48">
+                        <img src="https://bulma.io/images/placeholders/48x48.png" class="is-rounded">
+                    </figure>
+                    <div class="view-home-committee-member-name">
+                        <h3>Michal Sláma</h3>
+                        <p>U Stadionu 430, Pardubice</p>
+                    </div>
+                </div>
+            </div>
+            <div class="column is-one-fifth-desktop is-half-mobile">
+                <div class="view-home-committee-member">
+                    <figure class="image is-48x48">
+                        <img src="https://bulma.io/images/placeholders/48x48.png" class="is-rounded">
+                    </figure>
+                    <div class="view-home-committee-member-name">
+                        <h3>Olga Pavlů</h3>
+                        <p>U Stadionu 430, Pardubice</p>
+                    </div>
+                </div>
+            </div>
+            <div class="column is-one-fifth-desktop is-half-mobile">
+                <div class="view-home-committee-member">
+                    <figure class="image is-48x48">
+                        <img src="https://bulma.io/images/placeholders/48x48.png" class="is-rounded">
+                    </figure>
+                    <div class="view-home-committee-member-name">
+                        <h3>Aleš Klose</h3>
+                        <p>U Stadionu 430, Pardubice</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="section view-home-section">
+    <div class="container">
+        <h2 class="title view-home-section-headline"><span class="is-in-green">Dokumenty ke stažení</span></h2>
+
+        <div class="columns has-text-centered">
+            <div class="column">
+                <a href="" class="view-home-document-link">
+                    <figure>
+                        <img src="https://bulma.io/images/placeholders/320x480.png">
+                        <figcaption>Petiční arch (PDF)</figcaption>
+                    </figure>
+                </a>
+            </div>
+        </div>
+
+    </div>
+</section>
+<section class="section view-home-section">
+    <div class="container">
+        <h2 class="title view-home-section-headline"><span class="is-in-green">Podporují nás</span></h2>
+    </div>
+
+    <div class="columns has-text-centered">
+        <div class="column">
+            <div class="view-home-supporter-logo">
+                <img src="{% webpack_static "img/brand/supporters/piratska-strana.svg" %}" alt="Česká pirátská strana" />
+            </div>
+        </div>
+        <div class="column">
+            <div class="view-home-supporter-logo">
+                <img src="{% webpack_static "img/brand/supporters/zeleni.svg" %}" alt="Strana zelených" />
+            </div>
+        </div>
+        <div class="column">
+            <div class="view-home-supporter-logo">
+                <img src="{% webpack_static "img/brand/supporters/nase-pardubice.png" %}" alt="Naše Pardubice" />
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

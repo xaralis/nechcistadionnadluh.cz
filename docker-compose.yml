@@ -1,0 +1,33 @@
+version: '3.4'
+
+services:
+    db:
+        image: postgres:9.6.10-alpine
+        volumes:
+            - dbdata:/var/lib/postgresql
+        restart: always
+        ports:
+            - "55432:5432"
+        environment:
+            POSTGRES_USER: nsnd
+            POSTGRES_PASS: nsnd
+            POSTGRES_DB: nsnd
+
+    website:
+        build:
+            context: .
+        volumes:
+            - ./nsnd:/nsnd/nsnd
+            - media:/media
+        ports:
+            - "8080:80"
+        restart: always
+        environment:
+            DEBUG: 1
+            DATABASE_DSN: postgresql://nsnd:nsnd@db:5432/nsnd
+            ALLOWED_HOSTS: '*'
+            MEDIA_ROOT: /media
+
+volumes:
+    dbdata:
+    media:

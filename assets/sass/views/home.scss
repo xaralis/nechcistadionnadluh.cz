@@ -1,0 +1,95 @@
+.section.view-home-section {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+
+    @include from($tablet) {
+        margin-top: 5rem;
+        margin-bottom: 5rem;
+    }
+}
+
+.title.view-home-section-headline {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.view-home-document-link {
+    display: block;
+
+    figure, img {
+        max-height: 14rem;
+    }
+
+    figcaption {
+        font-weight: bold;
+    }
+}
+
+.view-home-committee-member {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &-name {
+        margin-top: .5rem;
+        text-align: center;
+
+        h3 {
+            font-weight: bold;
+        }
+
+        p {
+            font-size: $size-7;
+        }
+    }
+
+    @include from($tablet) {
+        flex-direction: row;
+
+        &-name {
+            text-align: left;
+            margin-top: 0;
+            margin-left: .5rem;
+        }
+    }
+}
+
+.view-home-supporter-logo {
+    img, svg {
+        max-height: 60px;
+    }
+}
+
+.hero.view-home-hero {
+    &:after {
+        content: '';
+        display: block;
+        height: 12px;
+        width: 100%;
+        background: $green;
+        background: repeating-linear-gradient(
+            -45deg,
+            $green,
+            $green 12px,
+            transparent 10px,
+            transparent 23px
+        );
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        border-bottom: 0;
+    }
+}
+
+.view-home-brand-wrapper {
+    margin-bottom: 2rem;
+}
+
+.view-home-brand {
+    height: 180px;
+}
+
+.subtitle .view-home-brand-emphasize {
+    font-weight: bold;
+    color: $green;
+    border-bottom: 2px $green solid;
+}
