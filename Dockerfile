@@ -82,7 +82,6 @@ RUN pip install -r /wheels/requirements.txt -f /wheels --user
 
 # Rest of source files
 COPY --chown=nsnd ./nsnd ./nsnd/
-COPY --chown=nsnd ./fonts ./fonts/
 
 # Collect static files
 RUN mkdir /nsnd/static && \
