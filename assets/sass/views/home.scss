@@ -68,6 +68,8 @@
 
 
 .view-home-hero {
+    position: relative;
+
     @include from($tablet) {
         display: flex;
         align-items: center;
@@ -78,10 +80,10 @@
     @include from($desktop) {
         background: repeating-linear-gradient(
             -45deg,
-            transparentize($green, .7),
-            transparentize($green, .7) 30px,
-            transparent 30px,
-            transparent 55px
+            transparentize($green, .6),
+            transparentize($green, .6) 30px,
+            transparentize($green, .8) 30px,
+            transparentize($green, .8) 55px
         );
         -webkit-backface-visibility: hidden;
         backface-visibility: hidden;
@@ -110,6 +112,33 @@
     @include from($tablet) {
         width: auto;
         height: 180px;
+    }
+}
+
+.view-home-hero-scroll-notif {
+    position: absolute;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    bottom: 0;
+    width: 5rem;
+    height: 5rem;
+    left: 50%;
+    margin-left: -50px;
+    background: $green;
+    border-top-left-radius: 3rem;
+    border-top-right-radius: 3rem;
+
+    .fas {
+        color: $white;
+        font-size: 3rem;
+        margin-bottom: 1rem;
+        opacity: .8;
+        transition: .2s ease-in-out;
+
+        &:hover {
+            opacity: 1;
+        }
     }
 }
 

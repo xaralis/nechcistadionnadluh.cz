@@ -6,10 +6,17 @@ $family-primary: "Poppins", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 $family-secondary: "Asap Condensed", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 $family-monospace: "Inconsolata", "Consolas", "Monaco", monospace;
 
-$text: #000;
-$green: #069F50;
+$text: #0f1926;
+$green: #008e24;
+$red: #d23440;
 $link: $green;
 $link-hover: $green;
+$grey: #666c74;
+$grey-dark: #3a424d;
+$grey-darker: #0f1926;
+$grey-light: lighten($grey, 10%);
+$grey-lighter: lighten($grey, 20%);
+$grey-lightest: lighten($grey, 30%);
 
 $title-family: $family-secondary;
 
@@ -23,6 +30,7 @@ $fa-font-path: '~@fortawesome/fontawesome-free/webfonts';
 @import "~@fortawesome/fontawesome-free/scss/regular";
 
 @import "./helpers/border-radius";
+@import "./helpers/smoothscroll";
 @import "./helpers/spacing";
 
 @import "./views/home";

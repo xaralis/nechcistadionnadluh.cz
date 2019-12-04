@@ -1,0 +1,8 @@
+.smooth-scroll-container {
+    scroll-behavior: smooth;
+}
+
+body.smooth-scroll-container {
+    max-height: 100vh;
+    overflow-y: scroll;
+}

@@ -31,7 +31,7 @@
 
     {% render_bundle 'main' 'css' %}
 </head>
-<body class="layout {% block body_class %}{% endblock %}">
+<body class="layout {% block body_class %}{% endblock %} smooth-scroll-container">
     {% block body %}
         {% block navbar %}
             {% include "includes/navbar.html" %}
