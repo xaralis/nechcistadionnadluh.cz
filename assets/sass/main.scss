@@ -19,13 +19,13 @@ $grey: #666c74;
 $grey-dark: #3a424d;
 $grey-darker: #0f1926;
 $grey-light: lighten($grey, 10%);
-$grey-lighter: lighten($grey, 20%);
+$grey-lighter: hsl(0, 0%, 90%);
 $grey-lightest: hsl(0, 0%, 96%);
 $progress-border-radius: $radius;
 $progress-bar-background-color: $grey-lightest;
 $navbar-item-active-color: $green;
 $navbar-background-color: $grey-lightest;
-$footer-background-colorL: $grey-lightest;
+$footer-background-color: $grey-lightest;
 $button-active-border-color: transparent;
 $button-focus-border-color: none;
 
