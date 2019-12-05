@@ -30,9 +30,20 @@
     <meta name="theme-color" content="#ffffff">
 
     <!-- preload-->
-    {% comment %} <link rel="preload" href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700&subset=latin-ext" as="style"> {% endcomment %}
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Asap+Condensed:500|Poppins:400,600&display=swap&subset=latin-ext" as="style">
 
     {% render_bundle 'main' 'css' %}
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-6600623-6"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', '{{ siteinfo.google_analytics_tracking_code }}');
+    </script>
+
 </head>
 <body class="layout {% block body_class %}{% endblock %} smooth-scroll-container">
     {% block body %}

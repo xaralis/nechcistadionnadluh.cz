@@ -201,6 +201,7 @@ SITEINFO = {
     "keywords": (),
     "google_maps_apikey": os.environ.get("GOOGLE_MAPS_APIKEY"),
     "facebook_url": "https://www.facebook.com/NechciStadionNaDluh/",
+    "google_analytics_tracking_code": os.environ.get("GOOGLE_ANALYTICS_TRACKING_CODE"),
 }
 
 # Webpack-built assets
