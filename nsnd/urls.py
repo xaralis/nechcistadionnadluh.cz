@@ -26,6 +26,7 @@ sitemaps = {}
 urlpatterns = [
     path("", TemplateView.as_view(template_name="core/home.html"), name="home"),
     path("pripojit-podpis/", TemplateView.as_view(template_name="core/sign.html"), name="sign"),
+    path("argumentar/", TemplateView.as_view(template_name="core/info.html"), name="info"),
     path("admin/", admin.site.urls),
     path(
         "sitemap.xml",

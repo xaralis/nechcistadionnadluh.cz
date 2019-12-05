@@ -16,12 +16,14 @@
         <div class="tile is-ancestor">
             <div class="tile is-parent">
                 <div class="tile is-child">
-                    <h2 class="subtitle">Stálá podpisová místa</h2>
+                    <h2 class="title is-size-5">Stálá podpisová místa</h2>ż
+                    {% if siteinfo.google_maps_apikey %}
+                    <iframe width="600" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJtQeTI0vJDUcRriT2zJSY1RI&key={{ siteinfo.google_maps_apikey }}" allowfullscreen></iframe>
+                    {% endif %}
                 </div>
-            </div>
             <div class="tile is-parent">
                 <div class="tile is-child">
-                    <h2 class="subtitle">Kde můžete potkat petiční stánek</h2>
+                    <h2 class="title is-size-5">Kde můžete potkat petiční stánek</h2>
                     <ul>
                         <li>Stánek 1</li>
                     </ul>

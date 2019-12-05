@@ -6,9 +6,13 @@ $family-primary: "Poppins", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 $family-secondary: "Poppins", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 $family-monospace: "Inconsolata", "Consolas", "Monaco", monospace;
 
-$text: #0f1926;
-$green: #008e24;
-$red: #d23440;
+// https://coolors.co/529643-f0a202-3891a6-ed3b38-1a2026
+$text: #1A2026;
+$text-strong: #1A2026;
+$green: #529643;
+$red: #ED3B38;
+$yellow: #F0A202;
+$blue: #3891A6;
 $link: $green;
 $link-hover: $green;
 $grey: #666c74;
@@ -22,6 +26,8 @@ $progress-bar-background-color: $grey-lightest;
 $navbar-item-active-color: $green;
 $navbar-background-color: $grey-lightest;
 $footer-background-colorL: $grey-lightest;
+$button-active-border-color: transparent;
+$button-focus-border-color: none;
 
 $title-family: $family-secondary;
 

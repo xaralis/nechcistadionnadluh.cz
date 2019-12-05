@@ -1,14 +1,14 @@
 {
-    "name": "Nechci stadion na dluh",
-    "short_name": "Nechci stadion na dluh",
+    "name": "Nechci stadion na dluh!",
+    "short_name": "Nechci stadion na dluh!",
     "icons": [
         {
-            "src": "android-chrome-192x192.png",
+            "src": "/img/favicons/android-chrome-192x192.png?v=WG2e6law4R",
             "sizes": "192x192",
             "type": "image/png"
         },
         {
-            "src": "android-chrome-512x512.png",
+            "src": "/img/favicons/android-chrome-512x512.png?v=WG2e6law4R",
             "sizes": "512x512",
             "type": "image/png"
         }
