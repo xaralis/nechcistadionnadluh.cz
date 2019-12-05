@@ -199,7 +199,8 @@ SITEINFO = {
     "name": "NechciStadionNaDluh.cz",
     "description": "Nechci stadion na dluh.",
     "keywords": (),
-    "google_maps_apikey": os.environ.get("GOOGLE_MAPS_APIKEY")
+    "google_maps_apikey": os.environ.get("GOOGLE_MAPS_APIKEY"),
+    "facebook_url": "https://www.facebook.com/NechciStadionNaDluh/",
 }
 
 # Webpack-built assets
