@@ -1,2 +1,2 @@
 <strong class="vote-progress-caption">Nasbíráno {{ votes_collected }} hlasů z {{ votes_targeted }}</strong>
-<progress class="progress is-large is-success vote-progress" value="60" max="100">60%</progress>
+<progress class="progress is-large is-success vote-progress" value="{{ votes_collected }}" max="{{ votes_targeted }}">{{ votes_percent }}%</progress>
