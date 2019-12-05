@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block wrapper_classes %}page{% endblock %}
+
+{% block content %}
+    {% block breadcrumb %}{% endblock %}
+
+    <header class="hero">
+        <div class="hero-body">
+            <div class="container">
+                {% block header %}
+                    {% block before_headline %}{% endblock %}
+                    <h1 class="page-headline">{% block page_title %}{% block headline %}{% endblock %}{% endblock %}</h1>
+                {% endblock %}
+                {% block header_sub %}{% endblock %}
+            </div>
+        </div>
+    </header>
+
+    <div class="page-content {% block content_wrapper_classes %}{% endblock %}">
+        <article class="page-article">
+            {% block article %}{% endblock %}
+        </article>
+
+        {% block after_article %}{% endblock %}
+    </div>
+{% endblock %}

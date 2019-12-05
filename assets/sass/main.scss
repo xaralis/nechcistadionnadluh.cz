@@ -3,7 +3,7 @@
 @import "~bulma/sass/utilities/initial-variables";
 
 $family-primary: "Poppins", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-$family-secondary: "Asap Condensed", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+$family-secondary: "Poppins", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 $family-monospace: "Inconsolata", "Consolas", "Monaco", monospace;
 
 $text: #0f1926;
@@ -16,7 +16,11 @@ $grey-dark: #3a424d;
 $grey-darker: #0f1926;
 $grey-light: lighten($grey, 10%);
 $grey-lighter: lighten($grey, 20%);
-$grey-lightest: lighten($grey, 30%);
+$grey-lightest: lighten($grey, 50%);
+$progress-border-radius: 0;
+$progress-bar-background-color: $grey-lightest;
+$navbar-item-active-color: $green;
+$navbar-background-color: $white-bis;
 
 $title-family: $family-secondary;
 
@@ -29,11 +33,16 @@ $fa-font-path: '~@fortawesome/fontawesome-free/webfonts';
 @import "~@fortawesome/fontawesome-free/scss/solid";
 @import "~@fortawesome/fontawesome-free/scss/regular";
 
+@import "./components/page";
+@import "./components/section-headline";
+@import "./components/vote-progress";
+
 @import "./helpers/border-radius";
 @import "./helpers/smoothscroll";
 @import "./helpers/spacing";
 
 @import "./views/home";
+@import "./views/sign";
 
 
 .has-text-green {
@@ -47,7 +56,9 @@ $fa-font-path: '~@fortawesome/fontawesome-free/webfonts';
 .is-in-green {
     color: $white;
     background-color: $green;
-    padding-left: .5rem;
-    padding-right: .5rem;
+    padding: .5rem;
+    border-radius: $radius;
+    // padding-left: .5rem;
+    // padding-right: .5rem;
     display: inline-block;
 }

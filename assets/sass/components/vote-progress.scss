@@ -1,0 +1,8 @@
+.vote-progress-caption {
+    @extend .subtitle;
+    font-weight: bold;
+}
+
+.progress.vote-progress {
+    height: 3rem;
+}

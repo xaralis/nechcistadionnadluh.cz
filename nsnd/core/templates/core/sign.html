@@ -1,0 +1,46 @@
+{% extends "page.html" %}
+{% load webpack_static from webpack_loader %}
+
+{% block headline %}Připojte svůj podpis{% endblock %}
+{% block body_class %}view-sign{% endblock %}
+
+{% block article %}
+<section class="section">
+    <div class="container">
+        {% include "includes/progress.html" %}
+        <p class="is-size-4">Aby byla právně závazná, je nutné podepsat petici osobně.</p>
+    </div>
+</section>
+<section class="section">
+    <div class="container">
+        <div class="tile is-ancestor">
+            <div class="tile is-parent">
+                <div class="tile is-child">
+                    <h2 class="subtitle">Stálá podpisová místa</h2>
+                </div>
+            </div>
+            <div class="tile is-parent">
+                <div class="tile is-child">
+                    <h2 class="subtitle">Kde můžete potkat petiční stánek</h2>
+                    <ul>
+                        <li>Stánek 1</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="section">
+    <div class="container">
+        <h2 class="section-headline">Dokumenty ke stažení</h2>
+
+        <a href="" class="view-sign-document-link">
+            <figure>
+                <img src="https://bulma.io/images/placeholders/320x480.png">
+                <figcaption>Petiční arch (PDF)</figcaption>
+            </figure>
+        </a>
+
+    </div>
+</section>
+{% endblock %}

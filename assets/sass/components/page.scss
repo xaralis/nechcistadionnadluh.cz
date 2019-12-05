@@ -1,0 +1,18 @@
+.page-headline {
+    @extend .title;
+    @extend .has-text-green;
+    @extend .is-size-1;
+
+    background-size: 1px 1em;
+    text-shadow:
+        2px 2px $white,
+        2px -2px $white,
+        -2px 2px $white,
+        -2px -2px $white;
+
+    display: inline;
+
+    box-shadow:
+        inset 0 -0.175em white,
+        inset 0 -0.25em $green;
+}

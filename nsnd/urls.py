@@ -24,7 +24,8 @@ from django.views.generic import TemplateView
 sitemaps = {}
 
 urlpatterns = [
-    path("", TemplateView.as_view(template_name="core/home.html")),
+    path("", TemplateView.as_view(template_name="core/home.html"), name="home"),
+    path("pripojit-podpis/", TemplateView.as_view(template_name="core/sign.html"), name="sign"),
     path("admin/", admin.site.urls),
     path(
         "sitemap.xml",
