@@ -16,11 +16,12 @@ $grey-dark: #3a424d;
 $grey-darker: #0f1926;
 $grey-light: lighten($grey, 10%);
 $grey-lighter: lighten($grey, 20%);
-$grey-lightest: lighten($grey, 50%);
-$progress-border-radius: 0;
+$grey-lightest: hsl(0, 0%, 96%);
+$progress-border-radius: $radius;
 $progress-bar-background-color: $grey-lightest;
 $navbar-item-active-color: $green;
-$navbar-background-color: $white-bis;
+$navbar-background-color: $grey-lightest;
+$footer-background-colorL: $grey-lightest;
 
 $title-family: $family-secondary;
 

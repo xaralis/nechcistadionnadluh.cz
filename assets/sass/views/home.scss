@@ -22,8 +22,7 @@
     padding: 3rem 2rem;
 
     @include from($desktop) {
-        border: 12px $green solid;
-        background-color: $white;
+        background-color: $grey-lightest;
         display: inline-block;
         padding: 5rem;
         border-radius: 3rem;
