@@ -53,12 +53,14 @@ module.exports = (env, argv) => {
                     ],
                 },
                 {
-                    test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+                    test: /\.(woff(2)?|ttf|eot|svg|png|jpe?g|gif)(\?v=\d+\.\d+\.\d+)?$/,
                     use: [{
-                        loader: 'file-loader',
+                        loader: 'url-loader',
                         options: {
-                            name: '[name].[hash].[ext]',
-                        }
+                            limit: 1000,
+                            // match ManifestStaticFilesStorage naming schema.
+                            name: '[path][name].[md5:hash:hex:12].[ext]',
+                        },
                     }]
                 }
             ],
@@ -72,6 +74,7 @@ module.exports = (env, argv) => {
                 chunkFilename: prodMode ? '[id].[contenthash].css' : '[id].css',
             }),
             new BundleTracker({filename: './webpack-stats.json'}),
+            new webpack.HashedModuleIdsPlugin(),
         ]
     };
 }

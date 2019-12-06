@@ -7,7 +7,7 @@ services:
             - dbdata:/var/lib/postgresql
         restart: always
         ports:
-            - "55432:5432"
+            - "55433:5432"
         environment:
             POSTGRES_USER: nsnd
             POSTGRES_PASS: nsnd
@@ -23,7 +23,8 @@ services:
             - "8080:80"
         restart: always
         environment:
-            DEBUG: 1
+            DEBUG: 0
+            SECRET_KEY: "asdklja51234lh"
             DATABASE_DSN: postgresql://nsnd:nsnd@db:5432/nsnd
             ALLOWED_HOSTS: '*'
             MEDIA_ROOT: /media

@@ -1,0 +1,28 @@
+<div id="js-share-modal" class="modal">
+    <div class="modal-background"></div>
+    <div class="modal-content">
+        <div class="box">
+            <h1 class="page-headline is-size-2">Dejte vědět ostatním</h1>
+            <p class="is-size-5 has-margin-t-4">Pro úspěch referenda je klíčové, abychom sehnali podporu včas. Pomozte nám sdílením na sociálních sítích.</p>
+            <div class="has-margin-t-5 has-text-centered">
+                <div>
+                    <a class="button is-success is-medium" href="https://www.facebook.com/sharer/sharer.php?u={{ request.build_absolute_uri }}" target="_blank" rel="noopener">
+                        <span class="icon is-medium">
+                            <i class="fab fa-facebook"></i>
+                        </span>
+                        <span>Sdílet na Facebooku</span>
+                    </a>
+                </div>
+                <div class="has-margin-t-4">
+                    <a class="button is-success is-medium" href="https://twitter.com/intent/tweet?text={{ "Nechci stadion na dluh"|iriencode }}&url={{ request.build_absolute_uri }}"  target="_blank" rel="noopener">
+                        <span class="icon is-medium">
+                            <i class="fab fa-twitter"></i>
+                        </span>
+                        <span>Sdílet na Twitteru</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button class="modal-close is-large is-success has-text-green" aria-label="close"></button>
+</div>

@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% load webpack_static from webpack_loader %}
+{% load static %}
 
 {% block navbar %}{% endblock %}
 
@@ -11,7 +11,7 @@
     <div class="view-home-hero-body">
         <div class="has-text-centered">
             <div class="view-home-brand-wrapper">
-                <img class="view-home-brand" src="{% webpack_static "img/brand/logo-colorful.v3.svg" %}" alt="NechciStadionNaDluh.cz" />
+                <img class="view-home-brand" src="{% static "img/brand/logo-colorful.v4.svg" %}" alt="NechciStadionNaDluh.cz" />
             </div>
             <h1 class="view-home-hero-headline">Referendum o stavbě <a href="#proc-referendum" class="view-home-brand-emphasize">fotbalového stadionu v centru Pardubic</a></h1>
         </div>
@@ -45,7 +45,7 @@
         <div class="buttons are-medium view-home-help-us-buttons">
             <a href="" class="button is-text">Sbírejte podpisy v okolí</a>
             {% comment %} <a href="" class="button is-text">Přispějte na náklady kampaně</a> {% endcomment %}
-            <a href="" class="button is-text">Dejte vědět ostatním</a>
+            <button class="button is-text js-share-modal-trigger">Dejte vědět ostatním</button>
         </div>
     </div>
 </section>

@@ -1,5 +1,4 @@
 {% extends "page.html" %}
-{% load webpack_static from webpack_loader %}
 
 {% block headline %}Připojte svůj podpis{% endblock %}
 {% block body_class %}view-sign{% endblock %}
@@ -18,7 +17,7 @@
                 <div class="tile is-child">
                     <h2 class="title is-size-5">Stálá podpisová místa</h2>
                     {% if siteinfo.google_maps_apikey %}
-                    <iframe width="100%" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJtQeTI0vJDUcRriT2zJSY1RI&key={{ siteinfo.google_maps_apikey }}" allowfullscreen></iframe>
+                        <iframe width="100%" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/d/u/0/embed?mid=1OgqcCuCSA6OTnSiPx5WwnW22u5NNgbRW&key={{ siteinfo.google_maps_apikey }}" allowfullscreen></iframe>
                     {% endif %}
                 </div>
             </div>

@@ -26,8 +26,10 @@ $progress-bar-background-color: $grey-lightest;
 $navbar-item-active-color: $green;
 $navbar-background-color: $grey-lightest;
 $footer-background-color: $grey-lightest;
+// $modal-background-background-color: transparentize($grey-lightest, .4);
 $button-active-border-color: transparent;
 $button-focus-border-color: none;
+$button-focus-box-shadow-size: 0;
 
 $title-family: $family-secondary;
 

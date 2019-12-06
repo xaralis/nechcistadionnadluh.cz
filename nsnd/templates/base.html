@@ -1,4 +1,5 @@
-{% load render_bundle webpack_static from webpack_loader %}
+{% load render_bundle  from webpack_loader %}
+{% load static %}
 {% load capture_tags %}
 <!DOCTYPE html>
 <html lang="cs">
@@ -15,15 +16,15 @@
     <meta property="og:type" content="website">
     <meta property="og:title" content="{{ meta_title }}">
     <meta property="og:description" content="{{ meta_description }}">
-    <meta property="og:image" content="https://{{ request.get_host }}{% webpack_static "img/brand/ogcapture.v2.png" %}">
+    <meta property="og:image" content="https://{{ request.get_host }}{% static "img/brand/ogcapture.v2.png" %}">
 
     <!-- Favicons -->
-    <link rel="apple-touch-icon" sizes="180x180" href="{% webpack_static "img/favicons/apple-touch-icon.png" %}?v=WG2e6law4R">
-    <link rel="icon" type="image/png" sizes="32x32" href="{% webpack_static "img/favicons/favicon-32x32.png" %}?v=WG2e6law4R">
-    <link rel="icon" type="image/png" sizes="16x16" href="{% webpack_static "img/favicons/favicon-16x16.png" %}?v=WG2e6law4R">
-    <link rel="manifest" href="{% webpack_static "img/favicons/site.webmanifest" %}?v=WG2e6law4R">
-    <link rel="mask-icon" href="{% webpack_static "img/favicons/safari-pinned-tab.svg" %}?v=WG2e6law4R" color="#529643">
-    <link rel="shortcut icon" href="{% webpack_static "img/favicons/favicon.ico" %}?v=WG2e6law4R">
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static "img/favicons/apple-touch-icon.png" %}?v=WG2e6law4R">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static "img/favicons/favicon-32x32.png" %}?v=WG2e6law4R">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static "img/favicons/favicon-16x16.png" %}?v=WG2e6law4R">
+    <link rel="manifest" href="{% static "img/favicons/site.webmanifest" %}?v=WG2e6law4R">
+    <link rel="mask-icon" href="{% static "img/favicons/safari-pinned-tab.svg" %}?v=WG2e6law4R" color="#529643">
+    <link rel="shortcut icon" href="{% static "img/favicons/favicon.ico" %}?v=WG2e6law4R">
     <meta name="apple-mobile-web-app-title" content="Nechci stadion na dluh!">
     <meta name="application-name" content="Nechci stadion na dluh!">
     <meta name="msapplication-TileColor" content="#ffffff">
@@ -71,6 +72,7 @@
         {% endblock %}
 
         {% include "includes/footer.html" %}
+        {% include "includes/share-modal.html" %}
     {% endblock %}
 
     {% render_bundle 'main' 'js' %}
