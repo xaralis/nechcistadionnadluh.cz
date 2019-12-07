@@ -25,7 +25,7 @@ services:
         restart: always
         environment:
             DEBUG: 0
-            SECRET_KEY: "asdklja51234lh"
+            SECRET_KEY: "not-really-secret-key"
             DATABASE_DSN: postgresql://nsnd:nsnd@db:5432/nsnd
             ALLOWED_HOSTS: '*'
             MEDIA_ROOT: /media
