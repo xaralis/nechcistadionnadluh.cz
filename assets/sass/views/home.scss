@@ -1,21 +1,60 @@
+.view-home-parallax-wrapper {
+    min-height: 100vh;
+    // min-height: -webkit-fill-available;
+    overflow-x: hidden;
+    /* Enable scrolling on the page. */
+    overflow-y: auto;
+    /* Set the perspective to 2px. This is essentailly the simulated distance from the viewport to transformed objects.*/
+    perspective: 2px;
+    perspective-origin: 0 0;
+}
+
+.view-home-parallax-wrapper-preserve {
+    position: relative;
+    transform-style: preserve-3d;
+    z-index: -1;
+}
+
 .view-home-hero {
     position: relative;
-    // min-height: 100vh;
-    min-height: -webkit-fill-available;
+
+    height: 100vh;
+    // height: -webkit-fill-available;
+
     display: flex;
     align-items: center;
     justify-content: center;
+    z-index: -1;
 
     @include from($desktop) {
-        background: repeating-linear-gradient(
-            -45deg,
-            transparentize($green, .78),
-            transparentize($green, .78) 45px,
-            transparentize($green, .9) 45px,
-            transparentize($green, .9) 90px
-        );
-        -webkit-backface-visibility: hidden;
-        backface-visibility: hidden;
+        &::after {
+            background: repeating-linear-gradient(
+                -45deg,
+                transparentize($green, .78),
+                transparentize($green, .78) 45px,
+                transparentize($green, .9) 45px,
+                transparentize($green, .9) 90px
+            );
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+
+            /* Display and position the pseudo-element */
+            content: " ";
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+
+            /* Move the pseudo-element back away from the camera,
+            * then scale it back up to fill the viewport.
+            * Because the pseudo-element is further away, it appears to move more slowly, like in real life. */
+            transform: translateZ(-1px) scale(2);
+            /* Force the background image to fill the whole element. */
+            background-size: 100%;
+            /* Keep the image from overlapping sibling elements. */
+            z-index: -1;
+        }
     }
 }
 
@@ -27,6 +66,7 @@
         display: inline-block;
         padding: 5rem;
         border-radius: 3rem;
+        box-shadow: 0 0 3rem darken($grey-light, 10%);
     }
 }
 
@@ -77,12 +117,17 @@
     border-top-left-radius: 3rem;
     border-top-right-radius: 3rem;
 
+    @include from($desktop) {
+        box-shadow: 0 2px 3rem darken($grey-light, 40%);
+    }
+
     .fas {
         color: $white;
         font-size: 3rem;
         margin-bottom: 1rem;
         opacity: .8;
         transition: .2s ease-in-out;
+        z-index: 1;
 
         &:hover {
             opacity: 1;

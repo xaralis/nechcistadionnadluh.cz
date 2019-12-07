@@ -18,7 +18,7 @@ $link-hover: $green;
 $grey: #666c74;
 $grey-dark: #3a424d;
 $grey-darker: #0f1926;
-$grey-light: lighten($grey, 10%);
+$grey-light: lighten($grey, 40%);
 $grey-lighter: hsl(0, 0%, 90%);
 $grey-lightest: hsl(0, 0%, 96%);
 $progress-border-radius: $radius;
@@ -71,4 +71,9 @@ $fa-font-path: '~@fortawesome/fontawesome-free/webfonts';
     // padding-left: .5rem;
     // padding-right: .5rem;
     display: inline-block;
+}
+
+html, body {
+    height: 100%;
+    overflow: hidden;
 }
