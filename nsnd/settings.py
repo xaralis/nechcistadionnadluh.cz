@@ -204,7 +204,7 @@ HTML_MINIFY = os.environ.get("MINIFY_HTML", DEBUG)
 
 SITEINFO = {
     "name": "NechciStadionNaDluh.cz",
-    "description": "Nechci stadion na dluh.",
+    "description": "Referendum o stavbě fotbalového stadionu v centru Pardubic",
     "keywords": (),
     "google_maps_apikey": os.environ.get("GOOGLE_MAPS_APIKEY"),
     "facebook_url": "https://www.facebook.com/NechciStadionNaDluh/",
