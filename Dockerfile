@@ -4,15 +4,17 @@ ENV PYTHONUNBUFFERED 1
 
 # Install dependencies
 RUN apk add --no-cache \
+    g++ \
     nodejs \
     nodejs-npm  \
     bash \
     git \
     openssh \
     postgresql-dev \
+    freetype-dev \
     jpeg-dev \
     zlib-dev \
-    build-base && \
+    build-base &&  \
     mkdir -p /build/wheels
 
 # Install python requirements, collect as wheels and re-install
@@ -53,6 +55,8 @@ RUN apk add --no-cache \
     build-base \
     jpeg-dev \
     zlib-dev \
+    freetype-dev \
+    openjpeg-dev \
     nginx \
     supervisor && \
     rm /etc/nginx/conf.d/default.conf && \
