@@ -1,0 +1,32 @@
+{% extends "page.html" %}
+{% load markdown_deux_tags %}
+
+{% block headline %}Argumentář{% endblock %}
+{% block body_class %}view-faq{% endblock %}
+{% block og_title %}{% if selected_faq %}{{ selected_faq.question }}{% else %}{{ block.super }}{% endif%}{% endblock %}
+{% block og_description %}{% if selected_faq %}{{ selected_faq.answer|markdown|striptags }}{% else %}{{ block.super }}{% endif%}{% endblock %}
+
+{% block article %}
+<div class="section">
+    <div class="container">
+
+        <div class="columns is-mobile is-multiline">
+            {% for faq in faqs %}
+                <div class="column is-12-mobile is-6-tablet is-4-desktop">
+                    <h2 id="{{ faq.slug }}" class="title is-size-5">{{ faq.question }} <a href="{{ request.scheme }}://{{ request.get_host }}{{ request.path }}?faq={{ faq.slug }}#{{ faq.slug }}"><i class="fas fa-link has-margin-l-2"></i></a></h2>
+                    <div class="content">
+                        {{ faq.answer|markdown }}
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+
+    </div>
+</div>
+{% endblock %}
+
+{% block after_body %}
+<script>
+
+</script>
+{% endblock %}
