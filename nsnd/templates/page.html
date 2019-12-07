@@ -17,6 +17,7 @@
         </div>
     </header>
 
+    {% block page_content %}
     <div class="page-content {% block content_wrapper_classes %}{% endblock %}">
         <article class="page-article">
             {% block article %}{% endblock %}
@@ -24,4 +25,5 @@
 
         {% block after_article %}{% endblock %}
     </div>
+    {% endblock %}
 {% endblock %}

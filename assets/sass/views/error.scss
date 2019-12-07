@@ -1,0 +1,17 @@
+.error-page {
+    min-height: 100vh;
+    min-height: -webkit-fill-available;
+
+    display: flex;
+    align-content: center;
+    align-items: center;
+
+    .error-page-content {
+    }
+
+    .error-logo {
+        display: block;
+        max-width: 180px;
+        margin-bottom: 3rem;
+    }
+}

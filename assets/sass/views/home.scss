@@ -1,6 +1,6 @@
 .view-home-parallax-wrapper {
     min-height: 100vh;
-    // min-height: -webkit-fill-available;
+    min-height: -webkit-fill-available;
     overflow-x: hidden;
     /* Enable scrolling on the page. */
     overflow-y: auto;
@@ -19,7 +19,7 @@
     position: relative;
 
     height: 100vh;
-    // height: -webkit-fill-available;
+    height: -webkit-fill-available;
 
     display: flex;
     align-items: center;

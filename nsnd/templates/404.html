@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block main_class %}error-page{% endblock %}
+
+{% block navbar %}{% endblock %}
+{% block footer %}{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div class="section">
+            <img src="{% static "img/brand/logo-colorful.v4.svg" %}" class="error-logo" alt="{{ siteinfo.title }}">
+
+            <h1 class="page-headline">{% block page_title %}Tak tuhle stránku tady nemáme :({% endblock %}</h1>
+            <p class="has-margin-t-5 is-size-5">Zkuste místo toho jít <a href="{% url "home" %}">na hlavní stránku</a>.</p>
+        </div>
+    </div>
+{% endblock %}

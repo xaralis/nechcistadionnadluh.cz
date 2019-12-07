@@ -13,14 +13,18 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+from functools import partial
+
 from django.conf import settings
 from django.conf.urls import url, include, static
 from django.contrib import admin
 from django.contrib.sitemaps.views import sitemap
 from django.urls import path
 from django.views.generic import TemplateView
+from django.views.defaults import page_not_found, server_error
 
 from .core import views
+
 
 
 sitemaps = {}
@@ -39,3 +43,10 @@ urlpatterns = [
         name="django.contrib.sitemaps.views.sitemap",
     ),
 ] + static.static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+
+if settings.DEBUG:
+    urlpatterns += [
+        path("404/", partial(page_not_found, exception=None)),
+        path("500/", server_error),
+    ]

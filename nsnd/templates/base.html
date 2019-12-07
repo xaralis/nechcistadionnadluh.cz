@@ -71,7 +71,9 @@
         </main>
         {% endblock %}
 
-        {% include "includes/footer.html" %}
+        {% block footer %}
+            {% include "includes/footer.html" %}
+        {% endblock %}
         {% include "includes/share-modal.html" %}
     {% endblock %}
 
