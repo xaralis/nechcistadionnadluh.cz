@@ -19,6 +19,7 @@ services:
         volumes:
             - ./nsnd:/nsnd/nsnd
             - media:/media
+            - thumbnails:/thumbnails
         ports:
             - "8080:80"
         restart: always
@@ -28,7 +29,9 @@ services:
             DATABASE_DSN: postgresql://nsnd:nsnd@db:5432/nsnd
             ALLOWED_HOSTS: '*'
             MEDIA_ROOT: /media
+            THUMBNAIL_CACHE_DIR: /thumbnails
 
 volumes:
     dbdata:
     media:
+    thumbnails:
