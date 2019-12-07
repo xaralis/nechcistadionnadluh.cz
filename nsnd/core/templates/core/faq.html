@@ -5,6 +5,7 @@
 {% block body_class %}view-faq{% endblock %}
 {% block og_title %}{% if selected_faq %}{{ selected_faq.question }}{% else %}{{ block.super }}{% endif%}{% endblock %}
 {% block og_description %}{% if selected_faq %}{{ selected_faq.answer|markdown|striptags }}{% else %}{{ block.super }}{% endif%}{% endblock %}
+{% block og_image %}{% if selected_faq %}{{ request.scheme }}://{{ request.get_host }}{% url "faq-image" slug=selected_faq.slug %}{% else %}{{ block.super }}{% endif%}{% endblock %}
 
 {% block article %}
 <div class="section">

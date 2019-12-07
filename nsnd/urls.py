@@ -29,6 +29,7 @@ urlpatterns = [
     path("", TemplateView.as_view(template_name="core/home.html"), name="home"),
     path("pripojit-podpis/", TemplateView.as_view(template_name="core/sign.html"), name="sign"),
     path("argumentar/", views.FAQ.as_view(), name="faq"),
+    path("argumentar/fotka/<slug>/", views.FAQImage.as_view(), name="faq-image"),
     path("admin/", admin.site.urls),
     url(r'^markdownx/', include('markdownx.urls')),
     path(

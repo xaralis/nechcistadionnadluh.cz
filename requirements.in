@@ -9,3 +9,4 @@ django-htmlmin
 django-capture-tag
 gunicorn
 pydash
+Pillow

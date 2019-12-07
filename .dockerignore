@@ -11,11 +11,13 @@
 !browserlists
 !.babelrc
 !webpack.config.js
+!thumbnails/**
 
 
 # Ignore unnecessary files inside allowed directories
 # This should go after the allowed directories
 assets/bundles/**/*
+thumbnails/cache/**
 
 **/*~
 **/*.log
