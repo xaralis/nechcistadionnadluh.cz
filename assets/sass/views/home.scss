@@ -1,4 +1,10 @@
+.view-home-html-overflow {
+    height: 100%;
+    overflow: hidden;
+}
+
 .view-home-parallax-wrapper {
+    height: 100%;
     min-height: 100vh;
     min-height: -webkit-fill-available;
     overflow-x: hidden;

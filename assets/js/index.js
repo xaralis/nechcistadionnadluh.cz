@@ -31,3 +31,16 @@ document.querySelectorAll('.js-share-modal-trigger').forEach(function(elem) {
         }).open();
     });
 })
+
+if (!!location.hash) {
+    // Make sure to scroll down to hash if not already scrolled. This
+    // fixes weird issue on HP for Chrome/Opera.
+    setTimeout(function () {
+        const elem = document.getElementById(location.hash.slice(1));
+
+        if (elem) {
+            elem.scrollIntoView();
+        }
+    }, 300);
+}
+

@@ -6,3 +6,10 @@ body.smooth-scroll-container {
     max-height: 100vh;
     overflow-y: scroll;
 }
+
+
+@media screen and (prefers-reduced-motion: reduce) {
+    .smooth-scroll-container {
+        scroll-behavior: auto;
+    }
+}

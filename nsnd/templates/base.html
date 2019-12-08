@@ -2,7 +2,7 @@
 {% load static %}
 {% load capture_tags %}
 <!DOCTYPE html>
-<html lang="cs">
+<html lang="cs" class="{% block html_class %}{% endblock %}">
 <head>
     <meta charset="utf-8">
     <title>{% capture as meta_title %}{% block page_title_full %}{% block page_title %}{% endblock %} | {{ siteinfo.name }}{% endblock %}{% endcapture %}</title>

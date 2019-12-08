@@ -4,24 +4,25 @@
 {% block navbar %}{% endblock %}
 
 {% block page_title_full %}Nechci stadion na dluh!{% endblock %}
-{% block body_class %}view-home view-home-parallax-wrapper{% endblock %}
-{% block main_class %}view-home view-home-parallax-wrapper-preserve{% endblock %}
+{% block html_class %}view-home-html-overflow{% endblock %}
+{% block body_class %}view-home-parallax-wrapper{% endblock %}
+{% block main_class %}view-home-parallax-wrapper-preserve{% endblock %}
 
 {% block content %}
 <section class="view-home-hero">
     <div class="view-home-hero-body">
         <div class="has-text-centered">
             <div class="view-home-brand-wrapper">
-                <img class="view-home-brand" src="{% static "img/brand/logo-colorful.v4.svg" %}" alt="NechciStadionNaDluh.cz" />
+                <img class="view-home-brand" src="{% static "img/brand/logo-colorful.v4.svg" %}" alt="{{ siteinfo.title }}" />
             </div>
-            <h1 class="view-home-hero-headline">Referendum o stavbě <a href="#proc-referendum" class="view-home-brand-emphasize">fotbalového stadionu v centru Pardubic</a></h1>
+            <h1 class="view-home-hero-headline">Referendum o stavbě <a data-scroll href="#otazka-proc-referendum" class="view-home-brand-emphasize">fotbalového stadionu v centru Pardubic</a></h1>
         </div>
     </div>
     <div class="view-home-hero-scroll-notif">
-        <a href="#proc-referendum"><i class="fas fa-arrow-circle-down"></i></a>
+        <a data-scroll href="#otazka-proc-referendum"><i class="fas fa-arrow-circle-down"></i></a>
     </div>
 </section>
-<section class="section view-home-section view-home-section-why" name="proc-referendum" id="proc-referendum">
+<section class="section view-home-section view-home-section-why" id="otazka-proc-referendum">
     <div class="container">
         <h1 class="why-superheadline">Otázka</h1>
         <div>
@@ -53,7 +54,6 @@
         </div>
         <div class="buttons are-medium view-home-help-us-buttons">
             <a href="{% url "sign" %}" class="button is-text">Sbírejte podpisy v okolí</a>
-            {% comment %} <a href="" class="button is-text">Přispějte na náklady kampaně</a> {% endcomment %}
             <button class="button is-text js-share-modal-trigger">Dejte vědět ostatním</button>
         </div>
     </div>
