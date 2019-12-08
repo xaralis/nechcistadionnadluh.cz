@@ -208,6 +208,7 @@ SITEINFO = {
     "name": "NechciStadionNaDluh.cz",
     "description": "Referendum o stavbě fotbalového stadionu v centru Pardubic",
     "keywords": (),
+    "email": "info@nechcistadionnadluh.cz",
     "google_maps_apikey": os.environ.get("GOOGLE_MAPS_APIKEY"),
     "facebook_url": "https://www.facebook.com/NechciStadionNaDluh/",
     "google_analytics_tracking_code": os.environ.get("GOOGLE_ANALYTICS_TRACKING_CODE"),

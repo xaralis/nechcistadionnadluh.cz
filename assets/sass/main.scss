@@ -73,3 +73,8 @@ $fa-font-path: '~@fortawesome/fontawesome-free/webfonts';
     // padding-right: .5rem;
     display: inline-block;
 }
+
+.copyleft {
+    display: inline-block;
+    transform: rotate(180deg);
+}
