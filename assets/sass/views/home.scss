@@ -9,6 +9,11 @@
     perspective-origin: 0 0;
 }
 
+// When modal is shown, make sure to avoid perspective or it won't work OK.
+html.is-clipped .view-home-parallax-wrapper {
+    perspective: none;
+}
+
 .view-home-parallax-wrapper-preserve {
     position: relative;
     transform-style: preserve-3d;
@@ -166,15 +171,27 @@
             @extend .is-size-1-desktop;
         }
 
+        .why-question {
+            @extend .subtitle;
+            @extend .is-size-4-mobile;
+            @extend .is-size-3-desktop;
+            @extend .has-text-white;
+
+            max-width: 30em;
+            margin-bottom: 4rem;
+            text-align: center;
+        }
+
         .why-headline {
             @extend .subtitle;
             @extend .is-size-6-mobile;
             @extend .is-size-4-desktop;
+            @extend .has-text-white;
 
             max-width: 30em;
             display: flex;
 
-            span, strong {
+            strong {
                 @extend .has-text-white;
             }
 
