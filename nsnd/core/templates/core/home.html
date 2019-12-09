@@ -15,7 +15,7 @@
             <div class="view-home-brand-wrapper">
                 <img class="view-home-brand" src="{% static "img/brand/logo-colorful.v4.svg" %}" alt="{{ siteinfo.title }}" />
             </div>
-            <h1 class="view-home-hero-headline">Referendum o stavbě <a data-scroll href="#otazka-proc-referendum" class="view-home-brand-emphasize">fotbalového stadionu v centru Pardubic</a></h1>
+            <h1 class="view-home-hero-headline">Referendum o stavbě fotbalového stadionu <a data-scroll href="#otazka-proc-referendum" class="view-home-brand-emphasize">v centru Pardubic za peníze města</a></h1>
         </div>
     </div>
     <div class="view-home-hero-scroll-notif">
@@ -24,21 +24,18 @@
 </section>
 <section class="section view-home-section view-home-section-why" id="otazka-proc-referendum">
     <div class="container">
-        <h1 class="why-superheadline">Otázka</h1>
-        <div>
-            <h2 class="why-question">Souhlasíte se stavbou fotbalového stadionu v centru města mezi ulicemi Labská a U Stadionu, za kterou město plánuje zaplatit více než 400 milionů Kč?</h2>
-        </div>
-    </div>
-    <div class="container">
         <h1 class="why-superheadline">Proč referendum?</h1>
         <div class="why-content">
-            <h2 class="why-headline"><span class="why-headline-bullet">1</span><span>Fotbalový stadion je obrovský projekt, <strong>15x dražší</strong> než rekonstrukce třídy Míru, <strong>20x dražší</strong> než rekonstrukce Tyršových sadů.</span></h2>
-            <h2 class="why-headline"><span class="why-headline-bullet">2</span><span>Město chce stavět, ale nemá peníze. Pardubice si plánují vzít <strong>největší úvěr v historii</strong>&mdash;téměř půl miliardy Kč. Splácet ho pak budeme <strong>dvacet let</strong>.</span></h2>
-            <h2 class="why-headline"><span class="why-headline-bullet">3</span><span>Projekt schválila jen těsná většina zastupitelů. Domníváme se, že by se k němu měli vyjádřit v referendu <strong>všichni občané Pardubic</strong>. Pokud seženeme <strong>8 000 podpisů</strong>, uskuteční se pro město závazné referendum.</span></h2>
+            <h2 class="why-headline"><span class="why-headline-bullet">1</span><span>Za stavbu fotbalového stadionu mají Pardubice z vlastního rozpočtu <strong>zaplatit stovky milionů</strong> – 15x více než za novou třídu Míru, 20x více než za rekonstrukci Tyršových sadů. Šance získat dotaci je minimální.</span></h2>
+            <h2 class="why-headline"><span class="why-headline-bullet">2</span><span>Vedení města chce stavět, ale <strong>nemá peníze</strong>. Proto se plánuje zadlužit a <strong>vzít si obří úvěr</strong> – až půl miliardy korun.</span></h2>
+            <h2 class="why-headline"><span class="why-headline-bullet">3</span><span>Projekt schválila jen těsná většina zastupitelů. Splácet ho ale budeme <strong>až dvacet let</strong> – ještě dlouho poté, co opustí své funkce.</span></h2>
+            <h2 class="why-headline"><span>K něčemu tak zásadnímu se <strong>mají vyjádřit všichni občané Pardubic</strong>. Pokud společně seženeme 7 000 podpisů, vyvoláme pro město závazné referendum v otázce:<br /><br />
+<em>„Souhlasíte se stavbou fotbalového stadionu v centru města mezi ulicemi Labská a U Stadionu, za kterou město plánuje zaplatit více než 400 milionů Kč?“</span></em>
+</h2>
             <div class="has-text-centered has-margin-t-5 has-margin-b-5">
-                <a href="{% url "sign" %}" class="button is-medium is-white">Chci připojit podpis</a>
+                <a href="{% url "sign" %}" class="button is-medium is-white">Chci se připojit</a>
             </div>
-            <div class="why-more">
+            <div class="why-more" style="display:none">
                 <a href="{% url "faq" %}" class="why-more-link">Více informací</a>
             </div>
         </div>
@@ -46,7 +43,7 @@
 </section>
 <section class="section view-home-section view-home-section-progress">
     <div class="container">
-        <h2 class="section-headline has-text-centered">Sbíráme podpisy</h2>
+        <h2 class="section-headline has-text-centered">Sbíráme 7 tisíc podpisů</h2>
         {% include "includes/progress.html" %}
 
         <div class="has-text-centered has-margin-t-5 has-margin-b-5">
