@@ -101,6 +101,10 @@ html.is-clipped .view-home-parallax-wrapper {
     max-width: 90%;
 
     @include from($tablet) {
+        height: 120px;
+    }
+
+    @include from($desktop) {
         width: auto;
         max-width: 100%;
         height: 180px;
@@ -156,7 +160,6 @@ html.is-clipped .view-home-parallax-wrapper {
     }
 
     &.view-home-section-why {
-        min-height: 100vh;
         // background: $green;
         background: linear-gradient(180deg, $green 0%, darken($green, 5%) 100%);
         color: $white;
@@ -174,13 +177,13 @@ html.is-clipped .view-home-parallax-wrapper {
             @extend .has-text-white;
             @extend .has-text-centered;
             @extend .is-size-3-mobile;
-            @extend .is-size-1-desktop;
+            @extend .is-size-2-desktop;
         }
 
         .why-question {
             @extend .subtitle;
-            @extend .is-size-4-mobile;
-            @extend .is-size-3-desktop;
+            @extend .is-size-5-mobile;
+            @extend .is-size-5-desktop;
             @extend .has-text-white;
             @extend .has-margin-t-5;
             @extend .has-margin-b-3;
@@ -191,12 +194,12 @@ html.is-clipped .view-home-parallax-wrapper {
         }
 
         .why-headline {
-            @extend .subtitle;
             @extend .is-size-6-mobile;
-            @extend .is-size-4-desktop;
+            @extend .is-size-5-desktop;
             @extend .has-text-white;
 
-            max-width: 30em;
+            line-height: 1.25;
+            max-width: 40em;
             display: flex;
 
             strong {
@@ -204,10 +207,10 @@ html.is-clipped .view-home-parallax-wrapper {
             }
 
             & +.why-headline {
-                margin-top: 1rem;
+                margin-top: 1.5rem;
 
                 @include from($desktop) {
-                    margin-top: 2rem;
+                    margin-top: 2.5rem;
                 }
             }
         }
@@ -223,7 +226,7 @@ html.is-clipped .view-home-parallax-wrapper {
             font-size: 110%;
 
             @include from($desktop) {
-                margin-right: 3rem;
+                margin-right: 2rem;
                 min-width: 3rem;
                 font-size: 130%;
                 border-right-width: 2px;
