@@ -206,7 +206,7 @@ HTML_MINIFY = os.environ.get("MINIFY_HTML", DEBUG)
 
 SITEINFO = {
     "name": "NechciStadionNaDluh.cz",
-    "description": "Referendum o stavbě fotbalového stadionu v centru Pardubic",
+    "description": "Referendum o stavbě fotbalového stadionu v centru Pardubic za peníze města",
     "keywords": (),
     "email": "tomas.drahy@nechcistadionnadluh.cz",
     "phone": "+420775609939",
