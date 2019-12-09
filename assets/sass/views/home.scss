@@ -302,6 +302,11 @@ html.is-clipped .view-home-parallax-wrapper {
             font-size: $size-7;
         }
     }
+
+    &-placeholder {
+        height: 100%;
+        justify-content: center;
+    }
 }
 
 .view-home-supporter-logo {
