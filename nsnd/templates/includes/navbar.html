@@ -18,11 +18,10 @@
         <div id="navbar" class="navbar-menu">
             <div class="navbar-end">
                 {% url "home" as home_url %}
-                {% url "sign" as sign_url %}
                 <a class="navbar-item {% if request.get_full_path == home_url %}is-active{% endif %}" href="{{ home_url }}">
                     Úvod
                 </a>
-                <a class="navbar-item {% if request.get_full_path == sign_url %}is-active{% endif %}" href="{{ sign_url }}">
+                <a class="navbar-item {% if request.get_full_path == sign_url %}is-active{% endif %}" href="{{ home_url }}#sbirame-podpisy">
                     Připojit podpis
                 </a>
                 <a class="navbar-item" href="{{ siteinfo.facebook_url }}" target="_blank" rel="noopener">

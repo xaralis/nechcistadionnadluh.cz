@@ -247,20 +247,38 @@ html.is-clipped .view-home-parallax-wrapper {
             border-bottom: 2px $white solid;
         }
     }
-
-    &.view-home-section-progress {
-        padding-top: 4rem;
-        padding-bottom: 4rem;
-
-        @include from($tablet) {
-            padding-top: 9rem;
-            padding-bottom: 9rem;
-        }
-    }
 }
 
 .view-home-help-us-buttons {
-    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-top: -1rem;
+    margin-left: -1rem;
+    margin-bottom: 1rem;
+
+    .button {
+        margin-top: 1rem;
+        margin-left: 1rem;
+    }
+
+    @include until($tablet) {
+        flex-direction: row;
+    }
+
+    @include from($desktop) {
+        flex-direction: row;
+    }
+
+    .main {
+        flex-grow: 1;
+    }
+
+    @include until($desktop) {
+        .button {
+            flex-grow: 1;
+        }
+    }
 }
 
 .view-home-committee-member {
