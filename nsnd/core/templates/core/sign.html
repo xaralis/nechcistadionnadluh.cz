@@ -1,4 +1,5 @@
 {% extends "page.html" %}
+{% load static %}
 
 {% block headline %}Připojte svůj podpis{% endblock %}
 {% block body_class %}view-sign{% endblock %}
@@ -7,8 +8,10 @@
 <section class="section">
     <div class="container">
         {% include "includes/progress.html" %}
-        <p class="is-size-4">Petici za vyhlášení referenda může podepsat každý občan Pardubic, který zde může volit. Petici bohužel není možné podepsat na internetu.</p>
-        <p class="is-size-4">Svůj podpis můžete připojit na stálých podpisových místech, u petičních stánků, nebo si arch rovnou sami vytiskněte, oslovte své okolí a pak ho doneste na stálé podpisové místo.
+        <div class="content">
+            <p class="is-size-5">Petici za vyhlášení referenda může podepsat <strong>každý občan Pardubic</strong>, který zde může volit. Petici bohužel <strong>není možné podepsat na internetu</strong>.</p>
+            <p class="is-size-5">Svůj podpis můžete připojit na <strong>stálých podpisových místech</strong>, u <strong>petičních stánků</strong>, nebo si arch rovnou <strong>sami vytiskněte</strong>, oslovte své okolí a pak ho doneste na stálé podpisové místo.
+        </div>
 </p>
     </div>
 </section>
@@ -38,10 +41,10 @@
     <div class="container">
         <h2 class="section-headline">Dokumenty ke stažení</h2>
 
-        <a href="" class="view-sign-document-link">
+        <a href="{% static "attachments/Podpisový arch A4.pdf" %}" class="view-sign-document-link">
             <figure>
-                <img src="https://bulma.io/images/placeholders/320x480.png">
-                <figcaption>Petiční arch (PDF)</figcaption>
+                <img src="{% static "img/podpisovy-arch.jpg" %}">
+                <figcaption>Podpisový arch (A4, PDF)</figcaption>
             </figure>
         </a>
 
