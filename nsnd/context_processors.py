@@ -16,7 +16,9 @@ def votes(request):
         return {
             "votes_collected": profile.votes_collected,
             "votes_targeted": profile.votes_targeted,
-            "votes_percent": (profile.votes_collected / profile.votes_targeted) * 100 if profile.votes_targeted > 0 else 0
+            "votes_percent": (profile.votes_collected / profile.votes_targeted) * 100
+            if profile.votes_targeted > 0
+            else 0,
         }
     except Exception as exc:
         return {
@@ -24,4 +26,3 @@ def votes(request):
             "votes_targeted": 0,
             "votes_percent": 0,
         }
-

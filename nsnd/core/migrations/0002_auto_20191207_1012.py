@@ -8,31 +8,50 @@ import markdownx.models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('core', '0001_initial'),
+        ("core", "0001_initial"),
     ]
 
     operations = [
         migrations.CreateModel(
-            name='FAQ',
+            name="FAQ",
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('question', models.TextField(verbose_name='Otázka')),
-                ('answer', markdownx.models.MarkdownxField(verbose_name='Odpověď')),
-                ('slug', models.SlugField(verbose_name='Slug')),
-                ('priority', models.SmallIntegerField(default=0, help_text='Čím vyšší, tím víc nahoře.', verbose_name='Priorita')),
+                (
+                    "id",
+                    models.AutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("question", models.TextField(verbose_name="Otázka")),
+                ("answer", markdownx.models.MarkdownxField(verbose_name="Odpověď")),
+                ("slug", models.SlugField(verbose_name="Slug")),
+                (
+                    "priority",
+                    models.SmallIntegerField(
+                        default=0,
+                        help_text="Čím vyšší, tím víc nahoře.",
+                        verbose_name="Priorita",
+                    ),
+                ),
             ],
-            options={
-                'verbose_name': 'FAQ',
-                'verbose_name_plural': 'FAQ',
-            },
+            options={"verbose_name": "FAQ", "verbose_name_plural": "FAQ",},
         ),
         migrations.AlterModelOptions(
-            name='siteprofile',
-            options={'verbose_name': 'Profil stránky', 'verbose_name_plural': 'Profily stránek'},
+            name="siteprofile",
+            options={
+                "verbose_name": "Profil stránky",
+                "verbose_name_plural": "Profily stránek",
+            },
         ),
         migrations.AlterField(
-            model_name='siteprofile',
-            name='site',
-            field=models.OneToOneField(on_delete=django.db.models.deletion.CASCADE, related_name='profile', to='sites.Site'),
+            model_name="siteprofile",
+            name="site",
+            field=models.OneToOneField(
+                on_delete=django.db.models.deletion.CASCADE,
+                related_name="profile",
+                to="sites.Site",
+            ),
         ),
     ]

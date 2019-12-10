@@ -1,7 +1,6 @@
 from django.contrib import admin
 from django.contrib.sites.admin import SiteAdmin
 from django.contrib.sites.models import Site
-
 from markdownx.admin import MarkdownxModelAdmin
 
 from . import models

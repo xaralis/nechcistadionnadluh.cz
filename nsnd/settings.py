@@ -121,9 +121,11 @@ DATABASES = {
 CACHES = {
     "default": {"BACKEND": "django.core.cache.backends.dummy.DummyCache",},
     "thumbnails": {
-        'BACKEND': 'django.core.cache.backends.filebased.FileBasedCache',
-        'LOCATION': os.environ.get("THUMBNAIL_CACHE_DIR", os.path.join(BASE_DIR, "thumbnails", "cache")),
-    }
+        "BACKEND": "django.core.cache.backends.filebased.FileBasedCache",
+        "LOCATION": os.environ.get(
+            "THUMBNAIL_CACHE_DIR", os.path.join(BASE_DIR, "thumbnails", "cache")
+        ),
+    },
 }
 
 # Mailing
@@ -207,7 +209,16 @@ HTML_MINIFY = os.environ.get("MINIFY_HTML", DEBUG)
 SITEINFO = {
     "name": "NechciStadionNaDluh.cz",
     "description": "Referendum o stavbě fotbalového stadionu v centru Pardubic za peníze města",
-    "keywords": ("referendum", "fotbal", "stadion", "pardubice", "petice", "stavba", "zastupitelstvo", "dluh"),
+    "keywords": (
+        "referendum",
+        "fotbal",
+        "stadion",
+        "pardubice",
+        "petice",
+        "stavba",
+        "zastupitelstvo",
+        "dluh",
+    ),
     "email": "tomas.drahy@nechcistadionnadluh.cz",
     "phone": "+420775609939",
     "google_maps_apikey": os.environ.get("GOOGLE_MAPS_APIKEY"),
@@ -272,4 +283,4 @@ CRISPY_TEMPLATE_PACK = "bulma"
 # Keep host and protocol from the proxy
 USE_X_FORWARDED_HOST = True
 USE_X_FORWARDED_PORT = True
-SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
