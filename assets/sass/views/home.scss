@@ -281,6 +281,22 @@ html.is-clipped .view-home-parallax-wrapper {
     }
 }
 
+.view-home-map-wrapper {
+    overflow: hidden;
+    border-radius: $radius;
+    height: 100%;
+    margin-bottom: -46px; // compensates for toolbar hide
+}
+
+.view-home-map {
+    position: relative;
+    border-radius: $radius;
+    top: -46px; // hides map toolbar
+    height: 100%;
+    width: 100%;
+    min-height: 15rem;
+}
+
 .view-home-committee-member {
     display: flex;
     flex-direction: column;

@@ -46,15 +46,14 @@
 </section>
 <section class="section view-home-section" id="sbirame-podpisy">
     <h2 class="section-headline has-text-centered">Sbíráme 7 tisíc podpisů</h2>
-
     <div class="container">
         <div class="tile is-ancestor">
             <div class="tile is-parent is-7 vertical">
                 <div class="tile is-child">
                     {% if siteinfo.google_maps_apikey %}
                         <h2 class="title is-size-5">Stálá podpisová místa</h2>
-                        <div style="overflow: hidden;">
-                            <iframe width="100%" height="450" frameborder="0" style="position: relative; border:0; top: -46px" src="https://www.google.com/maps/d/u/0/embed?mid=1OgqcCuCSA6OTnSiPx5WwnW22u5NNgbRW&key={{ siteinfo.google_maps_apikey }}" allowfullscreen></iframe>
+                        <div class="view-home-map-wrapper">
+                            <iframe frameborder="0" class="view-home-map" src="https://www.google.com/maps/d/u/0/embed?mid=1OgqcCuCSA6OTnSiPx5WwnW22u5NNgbRW&key={{ siteinfo.google_maps_apikey }}" allowfullscreen></iframe>
                         </div>
                     {% endif %}
 
@@ -80,8 +79,6 @@
                 </div>
             </div>
         </div>
-
-
     </div>
 </section>
 <section class="section view-home-section">
@@ -95,7 +92,7 @@
                     </figure>
                     <div class="view-home-committee-member-name">
                         <h3>Antonín Mlejnek</h3>
-                        <p>Dašická 879, Pardubice</p>
+                        <p>investor</p>
                     </div>
                 </div>
             </div>
@@ -106,7 +103,7 @@
                     </figure>
                     <div class="view-home-committee-member-name">
                         <h3>Jan Smeták</h3>
-                        <p>Pernštýnské náměstí  1, Pardubice</p>
+                        <p>marketingový specialista</p>
                     </div>
                 </div>
             </div>
@@ -117,7 +114,7 @@
                     </figure>
                     <div class="view-home-committee-member-name">
                         <h3>Mgr. Karel Haas</h3>
-                        <p>Kyjevská 429, Pardubice</p>
+                        <p>právník, zastupitel</p>
                     </div>
                 </div>
             </div>
@@ -128,7 +125,7 @@
                     </figure>
                     <div class="view-home-committee-member-name">
                         <h3>Ing. Dominik Bečka</h3>
-                        <p>náměstí Čs. legií 1113, Pardubice</p>
+                        <p>manažer řízení rizik</p>
                     </div>
                 </div>
             </div>
@@ -139,7 +136,7 @@
                     </figure>
                     <div class="view-home-committee-member-name">
                         <h3>Vojtěch Dobeš</h3>
-                        <p>Gorkého 2222, Pardubice</p>
+                        <p>Motoristický novinář, překladatel</p>
                     </div>
                 </div>
             </div>
@@ -150,7 +147,7 @@
                     </figure>
                     <div class="view-home-committee-member-name">
                         <h3>Daniel Frýda</h3>
-                        <p>Gagarinova 375, Pardubice</p>
+                        <p>jednatel společnosti provozující obchod a servis IT</p>
                     </div>
                 </div>
             </div>
@@ -161,7 +158,7 @@
                     </figure>
                     <div class="view-home-committee-member-name">
                         <h3>Ing. Michal Sláma, MBA</h3>
-                        <p>Erno Košťála 1003, Pardubice</p>
+                        <p>Vědecký pracovník, projektový manager</p>
                     </div>
                 </div>
             </div>
@@ -172,7 +169,7 @@
                     </figure>
                     <div class="view-home-committee-member-name">
                         <h3>Olga Pavlů</h3>
-                        <p>Bubeníkova 526, Pardubice</p>
+                        <p>zdravotní sestra na RD</p>
                     </div>
                 </div>
             </div>
@@ -183,7 +180,7 @@
                     </figure>
                     <div class="view-home-committee-member-name">
                         <h3>Ing. arch. Aleš Klose</h3>
-                        <p>Labská 146, Pardubice</p>
+                        <p>architekt, zastupitel</p>
                     </div>
                 </div>
             </div>
