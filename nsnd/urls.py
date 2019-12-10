@@ -16,29 +16,39 @@ Including another URLconf
 from functools import partial
 
 from django.conf import settings
-from django.conf.urls import url, include, static
-from django.contrib import admin
+from django.conf.urls import include, static, url
+from django.contrib import admin, sitemaps
 from django.contrib.sitemaps.views import sitemap
-from django.urls import path
-from django.views.generic import TemplateView
+from django.urls import path, reverse
 from django.views.defaults import page_not_found, server_error
+from django.views.generic import TemplateView
 
 from .core import views
 
 
+class StaticViewSitemap(sitemaps.Sitemap):
+    priority = 1
+    changefreq = "daily"
 
-sitemaps = {}
+    def items(self):
+        return ["home", "faq"]
+
+    def location(self, item):
+        return reverse(item)
+
+
+sitemap_info = {"static": StaticViewSitemap}
 
 urlpatterns = [
     path("", TemplateView.as_view(template_name="core/home.html"), name="home"),
     path("argumentar/", views.FAQ.as_view(), name="faq"),
     path("argumentar/fotka/<slug>/", views.FAQImage.as_view(), name="faq-image"),
     path("admin/", admin.site.urls),
-    url(r'^markdownx/', include('markdownx.urls')),
+    url(r"^markdownx/", include("markdownx.urls")),
     path(
         "sitemap.xml",
         sitemap,
-        {"sitemaps": sitemaps},
+        {"sitemaps": sitemap_info},
         name="django.contrib.sitemaps.views.sitemap",
     ),
 ] + static.static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
