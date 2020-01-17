@@ -182,9 +182,17 @@ MEDIA_URL = os.environ.get("MEDIA_URL", "/media/")
 # Logging
 LOGGING = {
     "version": 1,
-    "handlers": {"console": {"class": "logging.StreamHandler"}},
+    "disable_existing_loggers": False,
+    "handlers": {
+        "console": {"class": "logging.StreamHandler"},
+    },
     "loggers": {
-        "django": {"handlers": ["console"], "level": "INFO" if DEBUG else "WARNING"}
+        "django": {
+            "handlers": ["console"],
+            "level": os.environ.get("APP_LOG_LEVEL", "INFO"),
+            "propagate": True,
+        },
+        "gunicorn.access": {"handlers": ["console"], "level": os.environ.get("APP_LOG_LEVEL", "INFO")},
     },
 }
 

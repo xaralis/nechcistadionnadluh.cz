@@ -90,7 +90,7 @@ COPY --chown=nsnd ./thumbnails ./thumbnails/
 
 # Collect static files
 RUN mkdir /nsnd/static && \
-    DEBUG=1 django-admin collectstatic --noinput --verbosity=0
+    DEBUG=1 django-admin collectstatic --noinput --verbosity=1
 
 USER root
 

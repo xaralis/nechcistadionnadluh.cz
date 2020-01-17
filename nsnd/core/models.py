@@ -19,7 +19,6 @@ class SiteProfile(models.Model):
         verbose_name = "Profil stránky"
         verbose_name_plural = "Profily stránek"
 
-
 class FAQ(models.Model):
     question = models.TextField(verbose_name="Otázka", null=False, blank=False)
     answer = MarkdownxField(verbose_name="Odpověď", null=False, blank=False)

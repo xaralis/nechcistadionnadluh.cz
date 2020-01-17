@@ -19,10 +19,6 @@ class SiteProfileInline(admin.StackedInline):
 class NSNDSiteAdmin(SiteAdmin):
     inlines = (SiteProfileInline,)
 
-    def save_model(self, *args, **kwargs):
-        super().save_model(*args, **kwargs)
-        Site.objects.clear_cache()
-
 
 @admin.register(models.FAQ)
 class FAQ(MarkdownxModelAdmin):

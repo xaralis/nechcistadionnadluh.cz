@@ -1,5 +1,6 @@
 from django.conf import settings
 from django.contrib.sites.shortcuts import get_current_site
+from nsnd.core.models import SiteProfile
 
 
 def global_info(request):
@@ -12,7 +13,7 @@ def votes(request):
     site = get_current_site(request)
 
     try:
-        profile = site.profile
+        profile = SiteProfile.objects.get(site=site)
         return {
             "votes_collected": profile.votes_collected,
             "votes_targeted": profile.votes_targeted,
