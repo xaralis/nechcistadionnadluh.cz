@@ -4,27 +4,52 @@
 #
 #    pip-compile requirements.in
 #
-beautifulsoup4==4.8.1     # via django-htmlmin
+beautifulsoup4==4.8.1
+    # via django-htmlmin
 django-capture-tag==1.0
+    # via -r requirements.in
 django-crispy-forms==1.7.2
+    # via -r requirements.in
 django-htmlmin==0.11.0
+    # via -r requirements.in
 django-markdown-deux==1.0.5
+    # via -r requirements.in
 django-markdownx==2.0.28
+    # via -r requirements.in
 django-webpack-loader==0.6.0
-django==2.2.10
+    # via -r requirements.in
+django==2.2.18
+    # via
+    #   -r requirements.in
+    #   django-markdownx
 dsnparse==0.1.12
+    # via -r requirements.in
 gunicorn==19.9.0
-html5lib==1.0.1           # via django-htmlmin
-markdown2==2.3.8          # via django-markdown-deux
-markdown==3.1.1           # via django-markdownx
+    # via -r requirements.in
+html5lib==1.0.1
+    # via django-htmlmin
+markdown2==2.3.8
+    # via django-markdown-deux
+markdown==3.1.1
+    # via django-markdownx
 pillow==6.2.1
+    # via
+    #   -r requirements.in
+    #   django-markdownx
 psycopg2-binary==2.8.4
+    # via -r requirements.in
 pydash==4.7.5
-pytz==2019.3              # via django
-six==1.12.0               # via html5lib
-soupsieve==1.9.5          # via beautifulsoup4
-sqlparse==0.3.0           # via django
-webencodings==0.5.1       # via html5lib
+    # via -r requirements.in
+pytz==2019.3
+    # via django
+six==1.12.0
+    # via html5lib
+soupsieve==1.9.5
+    # via beautifulsoup4
+sqlparse==0.3.0
+    # via django
+webencodings==0.5.1
+    # via html5lib
 
 # The following packages are considered to be unsafe in a requirements file:
 # pip
